@@ -8,7 +8,6 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-
 import java.util.List;
 
 @Service
@@ -22,10 +21,9 @@ public class EmployeeImplementacion implements EmployeeService{
     }
 
     @Override
-    public Mono<EmployeeTO> createEmployee(Mono<Employee> employeeDom) {
-        return employeeDom.flatMap(employee ->
+    public Mono<EmployeeTO> createEmployee(Mono<Employee> employeeCre) {
+        return employeeCre.flatMap(employee ->
                 employeeRepositoryAdapter.saveEmployee(employee)
                         .map(EmployeeMapper::EmployeeCreate));
     }
-
 }
