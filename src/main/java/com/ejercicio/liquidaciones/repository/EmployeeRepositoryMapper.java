@@ -18,7 +18,7 @@ public class EmployeeRepositoryMapper {
 
     public static EmployeeData toData(Employee employee) {
         return EmployeeData.builder()
-                .document(employee.getDocument().getDocumentEnployee())
+                .document(employee.getDocument().getDocumentEmployee())
                 .name(employee.getName().getNameEmployee())
                 .startDate(toDatabaseFormat(employee.getStartDate().getStartDateEmployee()))
                 .position(employee.getPosition().getPositionEmployee())

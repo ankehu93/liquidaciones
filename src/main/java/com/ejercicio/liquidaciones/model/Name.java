@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Name {
     private String nameEmployee;
     public Name(String name) {
-        Objects.requireNonNull(name, "Nombre no puede estar vacio");
-        this.nameEmployee = name;
+        this.nameEmployee = Objects.requireNonNull(name, "Nombre no puede estar vacio");
+
     }
 }

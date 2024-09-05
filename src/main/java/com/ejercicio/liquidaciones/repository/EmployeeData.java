@@ -15,7 +15,6 @@ public class EmployeeData implements Serializable {
     private String id;
     @Field("document")
     private Integer document;
-
     @Field("nombre")
     private String name;
     @Field("fecha_inicio")

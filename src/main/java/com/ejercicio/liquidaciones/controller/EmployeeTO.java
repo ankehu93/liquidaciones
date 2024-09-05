@@ -12,9 +12,9 @@ import java.time.LocalDate;
         @Max(15)
         @Min(7)
         @NotNull(message = "El documento no puede estar vacio")
-        private Integer documentId;
+        private Integer document;
 
-        @Size(min = 1, max = 30)
+
         @Pattern(regexp = "^[a-zA-Z]+$")
         @NotNull(message = "El nombre no puede estar vacio")
         private String name;

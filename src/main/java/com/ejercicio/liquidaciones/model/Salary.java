@@ -8,7 +8,6 @@ import java.util.Objects;
     public class Salary {
         private Integer salaryEmployee;
         public Salary(Integer salary) {
-            Objects.requireNonNull(salary, "El salario no puede estar vacio");
-            this.salaryEmployee = salary;
+            this.salaryEmployee =  Objects.requireNonNull(salary, "El salario no puede estar vacio");
         }
     }

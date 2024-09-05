@@ -9,11 +9,8 @@ import java.util.Objects;
 @Data
 @NoArgsConstructor
 public class DocumentId {
-    private Integer documentEnployee;
+    private Integer documentEmployee;
     public DocumentId(Integer documentId) {
-        Objects.requireNonNull(documentId, "El documento no puede estar vacio");
-        this.documentEnployee = documentId;
+        this.documentEmployee =  Objects.requireNonNull(documentId, "El documento no puede estar vacio");
     }
-
-
 }
